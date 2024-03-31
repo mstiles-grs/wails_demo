@@ -36,7 +36,7 @@
     }
 
     function michealsFunc() {
-        MichaelsFunc().then((result) => console.log(result));
+        MichaelsFunc().then((result) => console.log(result, "michealsFunc""));
     }
 </script>
 
