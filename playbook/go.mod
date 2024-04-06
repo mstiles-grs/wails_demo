@@ -1,4 +1,4 @@
-module github.com/mstiles-grs/wails_demo
+module github.com/mstiles-grs/wails_demo/playbook
 
 go 1.21
 

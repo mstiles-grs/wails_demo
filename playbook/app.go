@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/mstiles-grs/wails_demo/sqlDB"
+	"github.com/mstiles-grs/wails_demo/playbook/sqlDB"
 )
 
 // App struct
