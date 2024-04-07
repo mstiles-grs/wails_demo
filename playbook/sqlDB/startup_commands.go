@@ -3,11 +3,20 @@ package sqlDB
 import (
 	"database/sql"
 	"log"
-
+"fmt"
 	_ "github.com/mattn/go-sqlite3"
+ "path/filepath"
+
 )
 
-func sqlStartUp() *sql.DB {
+func SQLStartUp() *sql.DB {
+
+ absPath, err := filepath.Abs("./mydatabase.db")
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    fmt.Println(absPath)
 	db, err := sql.Open("sqlite3", "./mydatabase.db")
 	if err != nil {
 		log.Fatal(err)
@@ -24,6 +33,8 @@ func sqlStartUp() *sql.DB {
 		log.Printf("%q: %s\n", err, sqlStmt)
 		return nil
 	}
+
+	fmt.Println(db)
 
 	return db
 }
